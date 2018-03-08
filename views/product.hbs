@@ -1,0 +1,18 @@
+    <h3>
+    {{product.title}}
+    </h3>
+    <p>
+    <img src="{{product.imageUri}}" height="100">     
+    </p>
+    <p>
+    {{product.description}}
+    </p>
+    
+    <p>
+    Price:
+    {{product.price}}
+    </p>
+    <br>
+    <form action="/cart/add/{{product._id}}" method="POST">    
+    <input type="submit" value="Add to Cart">
+    </form>

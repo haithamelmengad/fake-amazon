@@ -1,0 +1,34 @@
+<h1>Cart</h1>
+<a href="/">Back to browsing</a>    
+
+{{#each carts}}  
+    <h3>
+    {{this.title}}
+    </h3>
+    <p>
+    <img src="{{this.imageUri}}" height="100">     
+    </p>
+    <p>
+    {{this.description}}
+    </p>
+    <p>
+    Price:
+    {{this.price}}
+    </p>
+    
+    <p>
+    Quantity:
+    {{#if this.quantity}}
+    {{this.quantity}}
+    {{else}}
+    1
+    {{/if}}
+    </p>
+
+    <form action="/cart/delete/{{this._id}}" method="POST">    
+    <input type="submit" value="Delete Item">
+    </form>
+    <br>
+{{/each}}
+<h3></h3>
+

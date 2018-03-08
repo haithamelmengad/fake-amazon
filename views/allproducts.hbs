@@ -1,0 +1,19 @@
+{{#each arrayofProducts}}
+    
+    <h3>
+    {{this.title}}
+    </h3>
+    <p>
+    <img src="{{this.imageUri}}" height="100">     
+    </p>
+    <p>
+    {{this.description}}
+    </p>
+    
+    <p>
+    Price:
+    {{this.price}}
+    </p>
+
+    <a href="/product/{{this._id}}">View product</a>    
+{{/each}}
